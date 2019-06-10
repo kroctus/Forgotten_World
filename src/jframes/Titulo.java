@@ -42,6 +42,7 @@ public class Titulo extends javax.swing.JFrame {
         base.setLayout(null);
 
         botonIniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/iniciar_270.png"))); // NOI18N
+        botonIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonIniciar.setPreferredSize(new java.awt.Dimension(320, 60));
         botonIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +71,10 @@ public class Titulo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIniciarActionPerformed
-       JOptionPane.showMessageDialog(null, "Cargando.....");
+        JOptionPane.showMessageDialog(null, "Cargando.....");
+        new EleccionHistoria().setVisible(true);
+
+
     }//GEN-LAST:event_botonIniciarActionPerformed
 
     /**
