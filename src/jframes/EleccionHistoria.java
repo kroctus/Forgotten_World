@@ -39,27 +39,36 @@ public class EleccionHistoria extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1921, 1201));
         setResizable(false);
         getContentPane().setLayout(null);
-        getContentPane().add(botonHistoriaPrincipal);
-        botonHistoriaPrincipal.setBounds(480, 370, 250, 270);
 
-        botonHistoriasAlternativas.setText("jButton1");
+        botonHistoriaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/martillo_2.png"))); // NOI18N
+        botonHistoriaPrincipal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonHistoriaPrincipal.setBorderPainted(false);
+        botonHistoriaPrincipal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(botonHistoriaPrincipal);
+        botonHistoriaPrincipal.setBounds(430, 220, 330, 517);
+
+        botonHistoriasAlternativas.setBackground(new java.awt.Color(255, 255, 255));
+        botonHistoriasAlternativas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/armas_img_2.png"))); // NOI18N
+        botonHistoriasAlternativas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        botonHistoriasAlternativas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonHistoriasAlternativas.setDisabledIcon(null);
         getContentPane().add(botonHistoriasAlternativas);
-        botonHistoriasAlternativas.setBounds(1110, 370, 250, 270);
+        botonHistoriasAlternativas.setBounds(1080, 160, 350, 600);
 
         labelHistoriaPrincipal.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
         labelHistoriaPrincipal.setText("Historia principal");
         getContentPane().add(labelHistoriaPrincipal);
-        labelHistoriaPrincipal.setBounds(420, 660, 540, 60);
+        labelHistoriaPrincipal.setBounds(420, 770, 540, 60);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
         jLabel1.setText("Historias alternativas");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(1030, 670, 457, 64);
+        jLabel1.setBounds(1030, 770, 457, 64);
 
         labelEligeTuHistoria.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 70)); // NOI18N
         labelEligeTuHistoria.setText("Elige tu historia:");
         getContentPane().add(labelEligeTuHistoria);
-        labelEligeTuHistoria.setBounds(60, 80, 810, 90);
+        labelEligeTuHistoria.setBounds(640, 30, 810, 90);
 
         imagen_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/ARMAS.png"))); // NOI18N
         imagen_fondo.setText("jLabel1");
