@@ -5,6 +5,8 @@
  */
 package jframes;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author kroctus
@@ -41,6 +43,11 @@ public class Titulo extends javax.swing.JFrame {
 
         botonIniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/iniciar_270.png"))); // NOI18N
         botonIniciar.setPreferredSize(new java.awt.Dimension(320, 60));
+        botonIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonIniciarActionPerformed(evt);
+            }
+        });
         base.add(botonIniciar);
         botonIniciar.setBounds(850, 750, 215, 70);
 
@@ -61,6 +68,10 @@ public class Titulo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIniciarActionPerformed
+       JOptionPane.showMessageDialog(null, "Cargando.....");
+    }//GEN-LAST:event_botonIniciarActionPerformed
 
     /**
      * @param args the command line arguments
