@@ -27,18 +27,18 @@ public class EleccionHistoria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        imagen_fondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(1921, 1201));
+        setResizable(false);
+        getContentPane().setLayout(null);
+
+        imagen_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/ARMAS.png"))); // NOI18N
+        imagen_fondo.setText("jLabel1");
+        getContentPane().add(imagen_fondo);
+        imagen_fondo.setBounds(0, 0, 1910, 1080);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +79,6 @@ public class EleccionHistoria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel imagen_fondo;
     // End of variables declaration//GEN-END:variables
 }
