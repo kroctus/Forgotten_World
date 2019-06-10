@@ -27,6 +27,11 @@ public class EleccionHistoria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        botonHistoriaPrincipal = new javax.swing.JButton();
+        botonHistoriasAlternativas = new javax.swing.JButton();
+        labelHistoriaPrincipal = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        labelEligeTuHistoria = new javax.swing.JLabel();
         imagen_fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -34,6 +39,27 @@ public class EleccionHistoria extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1921, 1201));
         setResizable(false);
         getContentPane().setLayout(null);
+        getContentPane().add(botonHistoriaPrincipal);
+        botonHistoriaPrincipal.setBounds(480, 370, 250, 270);
+
+        botonHistoriasAlternativas.setText("jButton1");
+        getContentPane().add(botonHistoriasAlternativas);
+        botonHistoriasAlternativas.setBounds(1110, 370, 250, 270);
+
+        labelHistoriaPrincipal.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
+        labelHistoriaPrincipal.setText("Historia principal");
+        getContentPane().add(labelHistoriaPrincipal);
+        labelHistoriaPrincipal.setBounds(420, 660, 540, 60);
+
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
+        jLabel1.setText("Historias alternativas");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(1030, 670, 457, 64);
+
+        labelEligeTuHistoria.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 70)); // NOI18N
+        labelEligeTuHistoria.setText("Elige tu historia:");
+        getContentPane().add(labelEligeTuHistoria);
+        labelEligeTuHistoria.setBounds(60, 80, 810, 90);
 
         imagen_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/ARMAS.png"))); // NOI18N
         imagen_fondo.setText("jLabel1");
@@ -79,6 +105,11 @@ public class EleccionHistoria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonHistoriaPrincipal;
+    private javax.swing.JButton botonHistoriasAlternativas;
     private javax.swing.JLabel imagen_fondo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel labelEligeTuHistoria;
+    private javax.swing.JLabel labelHistoriaPrincipal;
     // End of variables declaration//GEN-END:variables
 }
