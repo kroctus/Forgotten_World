@@ -130,14 +130,14 @@ public class EleccionHistoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonHistoriaPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHistoriaPrincipalActionPerformed
-        JOptionPane.showMessageDialog(null, "Cargando la historia principal...");
+     
         new InicioHistoria().setVisible(true);
         dispose();
 
     }//GEN-LAST:event_botonHistoriaPrincipalActionPerformed
 
     private void botonHistoriasAlternativasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHistoriasAlternativasActionPerformed
-        JOptionPane.showMessageDialog(null, "Pasando a la selección de historias alternativas");
+        
         new frameHistoriaAlternativa().setVisible(true);
         dispose();
 
