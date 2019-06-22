@@ -18,6 +18,7 @@ public class Titulo extends javax.swing.JFrame {
      */
     public Titulo() {
         initComponents();
+        
     }
 
     /**
@@ -73,6 +74,7 @@ public class Titulo extends javax.swing.JFrame {
     private void botonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIniciarActionPerformed
         JOptionPane.showMessageDialog(null, "Cargando.....");
         new EleccionHistoria().setVisible(true);
+        dispose();
 
 
     }//GEN-LAST:event_botonIniciarActionPerformed
