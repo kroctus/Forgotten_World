@@ -47,6 +47,10 @@ public class InicioHistoria extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        botonAnterior2 = new javax.swing.JButton();
+        botonAnterior1 = new javax.swing.JButton();
+        botonAnterior3 = new javax.swing.JButton();
+        botonAnterior4 = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -149,6 +153,46 @@ public class InicioHistoria extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(90, 590, 1778, 45);
 
+        botonAnterior2.setVisible(false);
+        botonAnterior2.setText("Anterior");
+        botonAnterior2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAnterior2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonAnterior2);
+        botonAnterior2.setBounds(1570, 1000, 150, 50);
+
+        botonAnterior1.setVisible(false);
+        botonAnterior1.setText("Anterior");
+        botonAnterior1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAnterior1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonAnterior1);
+        botonAnterior1.setBounds(20, 1000, 150, 50);
+
+        botonAnterior3.setVisible(false);
+        botonAnterior3.setText("Anterior");
+        botonAnterior3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAnterior3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonAnterior3);
+        botonAnterior3.setBounds(20, 1000, 150, 50);
+
+        botonAnterior4.setVisible(false);
+        botonAnterior4.setText("Anterior");
+        botonAnterior4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAnterior4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonAnterior4);
+        botonAnterior4.setBounds(20, 1000, 150, 50);
+
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/his1.jpg"))); // NOI18N
         getContentPane().add(fondo);
         fondo.setBounds(0, 0, 1920, 1080);
@@ -157,10 +201,11 @@ public class InicioHistoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSiguienteActionPerformed
-
+       
         switch (contadorBoton) {
 
             case 0:
+
                 //Primera intearación
                 textoHistoria.setVisible(false);
                 Icon imgHis2;
@@ -178,7 +223,7 @@ public class InicioHistoria extends javax.swing.JFrame {
                 break;
             //Segunda interación
             case 1:
-
+                botonAnterior1.setVisible(true);
                 imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/castle.jpg"));
                 fondo.setIcon(imgHis2);
                 /*Quitamos los anteriores*/
@@ -198,6 +243,8 @@ public class InicioHistoria extends javax.swing.JFrame {
                 contadorBoton++;
                 break;
             case 2:
+                botonAnterior1.setVisible(false);
+                botonAnterior2.setVisible(true);
                 jLabel7.setVisible(false);
                 jLabel8.setVisible(false);
                 jLabel9.setVisible(false);
@@ -205,14 +252,30 @@ public class InicioHistoria extends javax.swing.JFrame {
                 jLabel11.setVisible(false);
                 imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragon_v2.jpg"));
                 fondo.setIcon(imgHis2);
+
                 contadorBoton++;
                 break;
             case 3:
+                botonAnterior2.setVisible(false);
+                botonAnterior3.setVisible(true);
+                jLabel7.setVisible(false);
+                jLabel8.setVisible(false);
+                jLabel9.setVisible(false);
+                jLabel10.setVisible(false);
+                jLabel11.setVisible(false);
+
                 imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragonfight2.png"));
                 fondo.setIcon(imgHis2);
                 contadorBoton++;
                 break;
             case 4:
+                botonAnterior3.setVisible(false);
+                botonAnterior4.setVisible(true);
+                jLabel7.setVisible(false);
+                jLabel8.setVisible(false);
+                jLabel9.setVisible(false);
+                jLabel10.setVisible(false);
+                jLabel11.setVisible(false);
                 imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/demon_v2.jpg"));
                 fondo.setIcon(imgHis2);
                 contadorBoton++;
@@ -221,6 +284,68 @@ public class InicioHistoria extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_botonSiguienteActionPerformed
+
+    private void botonAnterior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior1ActionPerformed
+
+      
+        //Primera intearación
+        textoHistoria.setVisible(false);
+        Icon imgHis2;
+        imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/his.jpg"));
+        fondo.setIcon(imgHis2);
+
+        /*borramos los labels de la siguiente ventana y escribimos los de la anterior*/
+        jLabel7.setVisible(false);
+        jLabel8.setVisible(false);
+        jLabel9.setVisible(false);
+        jLabel10.setVisible(false);
+        jLabel11.setVisible(false);
+
+        jLabel1.setVisible(true);
+        jLabel2.setVisible(true);
+        jLabel3.setVisible(true);
+        jLabel4.setVisible(true);
+        jLabel5.setVisible(true);
+        jLabel6.setVisible(true);
+        botonAnterior1.setVisible(false);
+        contadorBoton = 1;
+    }//GEN-LAST:event_botonAnterior1ActionPerformed
+
+    private void botonAnterior2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior2ActionPerformed
+      
+        Icon imgHis2;
+        jLabel7.setVisible(true);
+        jLabel8.setVisible(true);
+        jLabel9.setVisible(true);
+        jLabel10.setVisible(true);
+        jLabel11.setVisible(true);
+        imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/castle.jpg"));
+        fondo.setIcon(imgHis2);
+        botonAnterior2.setVisible(false);
+        botonAnterior1.setVisible(true);
+        contadorBoton = 2;
+    }//GEN-LAST:event_botonAnterior2ActionPerformed
+
+    private void botonAnterior4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior4ActionPerformed
+       
+        Icon imgHis2;
+        imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragonfight2.png"));
+        fondo.setIcon(imgHis2);
+        botonAnterior4.setVisible(false);
+        botonAnterior3.setVisible(true);
+        contadorBoton = 4;
+    }//GEN-LAST:event_botonAnterior4ActionPerformed
+
+    private void botonAnterior3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior3ActionPerformed
+      
+        Icon imgHis2;
+        imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragon_v2.jpg"));
+        fondo.setIcon(imgHis2);
+        botonAnterior3.setVisible(false);
+        botonAnterior2.setVisible(true);
+        contadorBoton = 3;
+
+    }//GEN-LAST:event_botonAnterior3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,6 +383,10 @@ public class InicioHistoria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAnterior1;
+    private javax.swing.JButton botonAnterior2;
+    private javax.swing.JButton botonAnterior3;
+    private javax.swing.JButton botonAnterior4;
     private javax.swing.JButton botonSiguiente;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
