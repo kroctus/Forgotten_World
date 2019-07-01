@@ -201,7 +201,7 @@ public class InicioHistoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSiguienteActionPerformed
-       
+
         switch (contadorBoton) {
 
             case 0:
@@ -280,6 +280,17 @@ public class InicioHistoria extends javax.swing.JFrame {
                 fondo.setIcon(imgHis2);
                 contadorBoton++;
                 break;
+            case 5:
+                botonAnterior4.setVisible(false);
+                botonSiguiente.setText("Empezar");
+                imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/castle2.jpg"));
+                fondo.setIcon(imgHis2);
+                contadorBoton++;
+                break;
+            case 6:
+                new Tutorial().setVisible(true);
+                dispose();
+                break;
         }
 
 
@@ -287,7 +298,6 @@ public class InicioHistoria extends javax.swing.JFrame {
 
     private void botonAnterior1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior1ActionPerformed
 
-      
         //Primera intearación
         textoHistoria.setVisible(false);
         Icon imgHis2;
@@ -312,7 +322,7 @@ public class InicioHistoria extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAnterior1ActionPerformed
 
     private void botonAnterior2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior2ActionPerformed
-      
+
         Icon imgHis2;
         jLabel7.setVisible(true);
         jLabel8.setVisible(true);
@@ -327,7 +337,7 @@ public class InicioHistoria extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAnterior2ActionPerformed
 
     private void botonAnterior4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior4ActionPerformed
-       
+
         Icon imgHis2;
         imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragonfight2.png"));
         fondo.setIcon(imgHis2);
@@ -337,7 +347,7 @@ public class InicioHistoria extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAnterior4ActionPerformed
 
     private void botonAnterior3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnterior3ActionPerformed
-      
+
         Icon imgHis2;
         imgHis2 = new ImageIcon(getClass().getResource("../imagenes/imagenes/dragon_v2.jpg"));
         fondo.setIcon(imgHis2);

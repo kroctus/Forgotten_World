@@ -137,8 +137,8 @@ public class EleccionHistoria extends javax.swing.JFrame {
     }//GEN-LAST:event_botonHistoriaPrincipalActionPerformed
 
     private void botonHistoriasAlternativasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHistoriasAlternativasActionPerformed
-        
-        new frameHistoriaAlternativa().setVisible(true);
+        JOptionPane.showMessageDialog(null, "Historias alternativas...");
+        new InicioHistoria2().setVisible(true);
         dispose();
 
     }//GEN-LAST:event_botonHistoriasAlternativasActionPerformed

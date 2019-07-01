@@ -11,27 +11,20 @@ package juego;
  */
 public class Personaje {
     
-    //Atributos
     private String nombre;
-    private int HP;
-    private int MP;
-    private int nivel;
-    
-    //Constructor por defecto
+    private String clase;
+    private Arma arma;
+    private Double vida;
+    private Double mp;
 
-    public Personaje() {
-    }
-    
-    //Constructor parametrizado
-
-    public Personaje(String nombre, int HP, int MP, int nivel) {
+    public Personaje(String nombre, String clase, Arma arma, Double vida, Double mp) {
         this.nombre = nombre;
-        this.HP = HP;
-        this.MP = MP;
-        this.nivel = nivel;
+        this.clase = clase;
+        this.arma = arma;
+        this.vida = vida;
+        this.mp = mp;
     }
 
-    //Getters and setters
     public String getNombre() {
         return nombre;
     }
@@ -40,37 +33,42 @@ public class Personaje {
         this.nombre = nombre;
     }
 
-    public int getHP() {
-        return HP;
+    public String getClase() {
+        return clase;
     }
 
-    public void setHP(int HP) {
-        this.HP = HP;
+    public void setClase(String clase) {
+        this.clase = clase;
     }
 
-    public int getMP() {
-        return MP;
+    public Arma getArma() {
+        return arma;
     }
 
-    public void setMP(int MP) {
-        this.MP = MP;
+    public void setArma(Arma arma) {
+        this.arma = arma;
     }
 
-    public int getNivel() {
-        return nivel;
+    public Double getVida() {
+        return vida;
     }
 
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
+    public void setVida(Double vida) {
+        this.vida = vida;
     }
-    
-    //ToString
+
+    public Double getMp() {
+        return mp;
+    }
+
+    public void setMp(Double mp) {
+        this.mp = mp;
+    }
 
     @Override
     public String toString() {
-        return "nombre:" + nombre + ", HP:" + HP + ", MP:" + MP + ", nivel:" + nivel;
+        return "Personaje{" + "nombre=" + nombre + ", clase=" + clase + ", arma=" + arma + ", vida=" + vida + ", mp=" + mp + '}';
     }
-    
-    
-    
+
+   
 }
