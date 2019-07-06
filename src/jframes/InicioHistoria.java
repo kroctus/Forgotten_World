@@ -290,7 +290,9 @@ public class InicioHistoria extends javax.swing.JFrame {
             case 6:
                 new Tutorial().setVisible(true);
                 dispose();
+                contadorBoton++;
                 break;
+  
         }
 
 
