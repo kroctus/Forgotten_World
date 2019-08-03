@@ -16,11 +16,27 @@ public class Titulo extends javax.swing.JFrame {
     /**
      * Creates new form Titulo
      */
+    
+    
+    /*variable que se encarga de guardar la stage en la que se ubica el jugador*/
+    /*esta tomará valores numericos y en base a esta se inicializará u jframe al pulsar el botón "continuar"*/
+    private static int save;
+    
     public Titulo() {
         initComponents();
 
     }
 
+    public static int getSave() {
+        return save;
+    }
+
+    public static void setSave(int save) {
+        Titulo.save = save;
+    }
+
+    
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,9 +48,12 @@ public class Titulo extends javax.swing.JFrame {
 
         base = new javax.swing.JPanel();
         botonIniciar = new javax.swing.JButton();
+        continuarLabel = new javax.swing.JLabel();
+        continuarButtom = new javax.swing.JButton();
         imagenTituloLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ashes of the forgotten World");
         setPreferredSize(new java.awt.Dimension(1921, 1201));
         setResizable(false);
 
@@ -52,6 +71,17 @@ public class Titulo extends javax.swing.JFrame {
         });
         base.add(botonIniciar);
         botonIniciar.setBounds(850, 750, 215, 70);
+
+        continuarLabel.setVisible(false);
+        continuarLabel.setFont(new java.awt.Font("Tahoma", 1, 27)); // NOI18N
+        continuarLabel.setText("CONTINUAR");
+        base.add(continuarLabel);
+        continuarLabel.setBounds(870, 850, 180, 40);
+
+        continuarButtom.setVisible(false);
+        continuarButtom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/marcoBoton.png"))); // NOI18N
+        base.add(continuarButtom);
+        continuarButtom.setBounds(840, 830, 240, 80);
 
         imagenTituloLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/title.png"))); // NOI18N
         base.add(imagenTituloLabel);
@@ -110,6 +140,12 @@ public class Titulo extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Titulo().setVisible(true);
+                JOptionPane.showMessageDialog(null, "El valor de la variabl ees " + Integer.toString(Titulo.getSave()));
+                
+                if (save==1) {
+                  continuarButtom.setVisible(true);
+                  continuarLabel.setVisible(true);
+                }
             }
         });
     }
@@ -117,6 +153,8 @@ public class Titulo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel base;
     private javax.swing.JButton botonIniciar;
+    private static javax.swing.JButton continuarButtom;
+    private static javax.swing.JLabel continuarLabel;
     private javax.swing.JLabel imagenTituloLabel;
     // End of variables declaration//GEN-END:variables
 }

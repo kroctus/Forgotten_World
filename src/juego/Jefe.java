@@ -13,8 +13,8 @@ public class Jefe extends Enemigo  {
     
     private final double VALORBLINDAJE;
 
-    public Jefe(String nombre, String clase, Arma arma, Double vida, Double mp, int debilidad, double blindaje) {
-        super(nombre, clase, arma, vida, mp, debilidad);
+    public Jefe(String nombre, String clase, Arma arma, Double vida, Double mp, int debilidad, double blindaje, int defensa) {
+        super(nombre, clase, arma, vida, mp, debilidad, defensa);
         this.VALORBLINDAJE=blindaje;
 
     }

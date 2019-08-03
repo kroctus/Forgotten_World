@@ -9,20 +9,22 @@ package juego;
  *
  * @author kroctus
  */
-public class Personaje {
+public abstract class Personaje {
     
     private String nombre;
     private String clase;
     private Arma arma;
     private Double vida;
     private Double mp;
+    private double defensa;
 
-    public Personaje(String nombre, String clase, Arma arma, Double vida, Double mp) {
+    public Personaje(String nombre, String clase, Arma arma, Double vida, Double mp, double defensa) {
         this.nombre = nombre;
         this.clase = clase;
         this.arma = arma;
         this.vida = vida;
         this.mp = mp;
+        this.defensa= defensa;
     }
 
     public String getNombre() {
@@ -65,10 +67,26 @@ public class Personaje {
         this.mp = mp;
     }
 
+    public double getDefensa() {
+        return defensa;
+    }
+
+    public void setDefensa(int defensa) {
+        this.defensa = defensa;
+    }
+    
+    /*Método que simula la subida de nivel*/
+    
+    public abstract  void subirDeNivel();
+    
+
     @Override
     public String toString() {
-        return "Personaje{" + "nombre=" + nombre + ", clase=" + clase + ", arma=" + arma + ", vida=" + vida + ", mp=" + mp + '}';
+        return "Personaje{" + "nombre=" + nombre + ", clase=" + clase + ", arma=" + arma + ", vida=" + vida + ", mp=" + mp + ", defensa=" + defensa + '}';
     }
+
+    
+   
 
    
 }

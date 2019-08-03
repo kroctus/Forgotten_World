@@ -54,6 +54,7 @@ public class InicioHistoria extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setPreferredSize(new java.awt.Dimension(1921, 1201));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -288,7 +289,7 @@ public class InicioHistoria extends javax.swing.JFrame {
                 contadorBoton++;
                 break;
             case 6:
-                new Tutorial().setVisible(true);
+                new Fueguito().setVisible(true);
                 dispose();
                 contadorBoton++;
                 break;

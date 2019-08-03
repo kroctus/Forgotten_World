@@ -9,7 +9,7 @@ package juego;
  *
  * @author kroctus
  */
-public abstract class Arma {
+public class Arma {
     
         private Double ataque;
         private String nombre;
@@ -22,6 +22,10 @@ public abstract class Arma {
         this.velocidad = velocidad;
         this.magica = magica;
     }
+
+    public Arma() {
+    }
+    
 
     public Double getAtaque() {
         return ataque;

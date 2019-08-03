@@ -34,6 +34,8 @@ public class FrameHistoriaAlternativa extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ashes of the forgotten World");
+        setAlwaysOnTop(true);
         setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(null);
 
