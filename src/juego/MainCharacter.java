@@ -30,12 +30,17 @@ public class MainCharacter extends Personaje {
     }
 
     //Método para simular la subida de nivel aumentando los atributos del personajes
+    
+    public void subirDeNivel(MainCharacter alice) {
+        alice.getArma().setAtaque(alice.getArma().getAtaque() + 50);
+        alice.setDefensa((int) (alice.getDefensa() + 50));
+        alice.setMp(alice.getMp() + 50);
+        alice.setVida(alice.getVida() + 50);
+    }
+
     @Override
     public void subirDeNivel() {
-        super.getArma().setAtaque(super.getArma().getAtaque() + 50);
-        super.setDefensa((int) (super.getDefensa() + 50));
-        super.setMp(super.getMp() + 50);
-        super.setVida(super.getVida() + 75);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -76,7 +76,6 @@ public class EleccionHistoria extends javax.swing.JFrame {
         fondo.setBounds(0, -30, 1970, 1140);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1921, 1201));
         setResizable(false);

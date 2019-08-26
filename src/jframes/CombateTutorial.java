@@ -32,7 +32,7 @@ public class CombateTutorial extends javax.swing.JFrame {
     private int contBotonPersonaje;
 
     /*Estado de las habilidades*/
- /*Esto nos permitora controlar que habilidad se ha seleccionado o no */
+    /*Esto nos permitora controlar que habilidad se ha seleccionado o no */
     private static boolean eImpacto;
     private static boolean eSlam;
     private static boolean eBigSlam;
@@ -56,12 +56,12 @@ public class CombateTutorial extends javax.swing.JFrame {
 
     //Personaje principal
     /*  private String nombre;
-    private String clase;
-    private Arma arma;
-    private Double vida;
-    private Double mp;
-    private int defensa;*/
- /*Arma para el personaje principal*/
+     private String clase;
+     private Arma arma;
+     private Double vida;
+     private Double mp;
+     private int defensa;*/
+    /*Arma para el personaje principal*/
     private static Martillo ancelot = new Martillo(25.0, "Anecelot", 100.0, false);
     private static MainCharacter alice = new MainCharacter("Alice", "Demonio", ancelot, 200.0, 250.0, 100) {
         @Override
@@ -89,7 +89,7 @@ public class CombateTutorial extends javax.swing.JFrame {
         /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/
 
 
- /*Si se quedan sin vida alguno de los dos se acabe el combate*/
+        /*Si se quedan sin vida alguno de los dos se acabe el combate*/
 //        if (alice.getVida() <= 0) {
 //            jugadorPierde = true;
 //            finPelea = true;
@@ -102,6 +102,7 @@ public class CombateTutorial extends javax.swing.JFrame {
 //        }
 
         /*GESTIÓN DE TURNOS*/
+
         if (turno == true) {
             reverlarHabilidades();
         } else {
@@ -200,6 +201,11 @@ public class CombateTutorial extends javax.swing.JFrame {
         siguienteFase.setForeground(new java.awt.Color(204, 0, 204));
         siguienteFase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/siguientePe.png"))); // NOI18N
         siguienteFase.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        siguienteFase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                siguienteFaseActionPerformed(evt);
+            }
+        });
         getContentPane().add(siguienteFase);
         siguienteFase.setBounds(1730, 890, 120, 70);
 
@@ -508,7 +514,10 @@ public class CombateTutorial extends javax.swing.JFrame {
 
     /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/ /*JUEGO*/
 
- /*metodo que oculta las habilidades cuando no sea el turno del jugador*/
+    /*metodo que oculta las habilidades cuando no sea el turno del jugador*/
+
+
+
 
     public static void ocultarHabilidades() {
 
@@ -581,8 +590,8 @@ public class CombateTutorial extends javax.swing.JFrame {
     private void slamButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_slamButtomActionPerformed
 
         /*Devolvemos a 0 los valores de los contadores siempre que se pulse una diferente, salvo la que hace referencia al mismo boton*/
- /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
-        y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
+        /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
+         y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
         contadorBigSlam = 0;
         contadorCastigo = 0;
         contadorRompe = 0;
@@ -622,8 +631,8 @@ public class CombateTutorial extends javax.swing.JFrame {
     private void bigSlamButtom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bigSlamButtom1ActionPerformed
 
         /*Devolvemos a 0 los valores de los contadores siempre que se pulse una diferente, salvo la que hace referencia al mismo boton*/
- /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
-        y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
+        /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
+         y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
         contadorSlam = 0;
         contadorCastigo = 0;
         contadorRompe = 0;
@@ -656,8 +665,8 @@ public class CombateTutorial extends javax.swing.JFrame {
 
     private void impactoMeteoricoButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_impactoMeteoricoButtomActionPerformed
         /*Devolvemos a 0 los valores de los contadores siempre que se pulse una diferente, salvo la que hace referencia al mismo boton*/
- /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
-        y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
+        /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
+         y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
         contadorSlam = 0;
         contadorBigSlam = 0;
         contadorCastigo = 0;
@@ -690,8 +699,8 @@ public class CombateTutorial extends javax.swing.JFrame {
 
     private void posturaButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_posturaButtomActionPerformed
         /*Devolvemos a 0 los valores de los contadores siempre que se pulse una diferente, salvo la que hace referencia al mismo boton*/
- /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
-        y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
+        /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
+         y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
         contadorSlam = 0;
         contadorBigSlam = 0;
         contadorCastigo = 0;
@@ -724,8 +733,8 @@ public class CombateTutorial extends javax.swing.JFrame {
 
     private void rompeCorazonesButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rompeCorazonesButtomActionPerformed
         /*Devolvemos a 0 los valores de los contadores siempre que se pulse una diferente, salvo la que hace referencia al mismo boton*/
- /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
-        y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
+        /*Con esto conseguimos que cuando de seleccione un boton deiferente se muestre la descripción de este 
+         y cuando se pulse de nuevo el anterior se muestre la descripción de este y no que se seleccione*/
         contadorSlam = 0;
         contadorBigSlam = 0;
         contadorCastigo = 0;
@@ -793,6 +802,14 @@ public class CombateTutorial extends javax.swing.JFrame {
             }
         }
 
+        vidaFuggie.setText(fuggie.getVida().toString());
+        magiaFuggie.setText(fuggie.getMp().toString());
+        EscudoFuggie.setText(String.valueOf(fuggie.getDefensa()));
+
+        /*Actualizamos los datos del personaje*/
+        vidaPj.setText(alice.getVida().toString());
+        manaPj.setText(alice.getMp().toString());
+        escudoPj.setText(String.valueOf(alice.getDefensa()));
 
     }//GEN-LAST:event_slamButtomSActionPerformed
 
@@ -836,6 +853,15 @@ public class CombateTutorial extends javax.swing.JFrame {
             }
 
         }
+
+        vidaFuggie.setText(fuggie.getVida().toString());
+        magiaFuggie.setText(fuggie.getMp().toString());
+        EscudoFuggie.setText(String.valueOf(fuggie.getDefensa()));
+
+        /*Actualizamos los datos del personaje*/
+        vidaPj.setText(alice.getVida().toString());
+        manaPj.setText(alice.getMp().toString());
+        escudoPj.setText(String.valueOf(alice.getDefensa()));
     }//GEN-LAST:event_bigSlamButtomSActionPerformed
 
     private void impactoMeteoricoButtomSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_impactoMeteoricoButtomSActionPerformed
@@ -877,6 +903,15 @@ public class CombateTutorial extends javax.swing.JFrame {
                 gestionJuego();
             }
         }
+
+        vidaFuggie.setText(fuggie.getVida().toString());
+        magiaFuggie.setText(fuggie.getMp().toString());
+        EscudoFuggie.setText(String.valueOf(fuggie.getDefensa()));
+
+        /*Actualizamos los datos del personaje*/
+        vidaPj.setText(alice.getVida().toString());
+        manaPj.setText(alice.getMp().toString());
+        escudoPj.setText(String.valueOf(alice.getDefensa()));
     }//GEN-LAST:event_impactoMeteoricoButtomSActionPerformed
 
     private void posturaButtomSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_posturaButtomSActionPerformed
@@ -917,6 +952,15 @@ public class CombateTutorial extends javax.swing.JFrame {
             }
 
         }
+
+        vidaFuggie.setText(fuggie.getVida().toString());
+        magiaFuggie.setText(fuggie.getMp().toString());
+        EscudoFuggie.setText(String.valueOf(fuggie.getDefensa()));
+
+        /*Actualizamos los datos del personaje*/
+        vidaPj.setText(alice.getVida().toString());
+        manaPj.setText(alice.getMp().toString());
+        escudoPj.setText(String.valueOf(alice.getDefensa()));
     }//GEN-LAST:event_posturaButtomSActionPerformed
 
     private void rompeCorazonesButtomSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rompeCorazonesButtomSActionPerformed
@@ -935,6 +979,15 @@ public class CombateTutorial extends javax.swing.JFrame {
             escudoPj.setText(String.valueOf(alice.getDefensa()));
             gestionJuego();
         }
+
+        vidaFuggie.setText(fuggie.getVida().toString());
+        magiaFuggie.setText(fuggie.getMp().toString());
+        EscudoFuggie.setText(String.valueOf(fuggie.getDefensa()));
+
+        /*Actualizamos los datos del personaje*/
+        vidaPj.setText(alice.getVida().toString());
+        manaPj.setText(alice.getMp().toString());
+        escudoPj.setText(String.valueOf(alice.getDefensa()));
     }//GEN-LAST:event_rompeCorazonesButtomSActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
@@ -943,7 +996,7 @@ public class CombateTutorial extends javax.swing.JFrame {
         fondoLabel.setIcon(imgCombate);
 
         /*quitamos el bloqueo*/
- /*El label de bloqueo que hemos puesto para que no se puedan usar los botones s cuando se esta en la selección de habilidades*/
+        /*El label de bloqueo que hemos puesto para que no se puedan usar los botones s cuando se esta en la selección de habilidades*/
         bloqueo = false;
 
         /*HACEMOS INVISIBLES LA DESCRIPCIÓN DE LAS SKILLS*/
@@ -1069,7 +1122,7 @@ public class CombateTutorial extends javax.swing.JFrame {
     private void reintentarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reintentarActionPerformed
 
         /*200,250,100*/
- /*Devolvemos al inicio los styats del personaje*/
+        /*Devolvemos al inicio los styats del personaje*/
         alice.setVida(200.0);
         alice.setMp(250.0);
         alice.setDefensa(100);
@@ -1097,14 +1150,20 @@ public class CombateTutorial extends javax.swing.JFrame {
         rompeCorazonesButtomS.setVisible(false);
         posturaButtomS.setVisible(false);
 
-        alice.subirDeNivel();
+        alice.subirDeNivel(alice);
     }//GEN-LAST:event_victoriaButtomActionPerformed
 
     private void guardarButtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarButtomActionPerformed
         Titulo.setSave(1);
         partidaGuardada.setVisible(true);
-        JOptionPane.showMessageDialog(null, "El valor de la variable es " + Integer.toString( Titulo.getSave()));
+        JOptionPane.showMessageDialog(null, "El valor de la variable es " + Integer.toString(Titulo.getSave()));
     }//GEN-LAST:event_guardarButtomActionPerformed
+
+    private void siguienteFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteFaseActionPerformed
+
+        new Capitulo1().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_siguienteFaseActionPerformed
 
     /**
      * @param args the command line arguments

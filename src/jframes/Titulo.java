@@ -140,12 +140,12 @@ public class Titulo extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Titulo().setVisible(true);
-                JOptionPane.showMessageDialog(null, "El valor de la variabl ees " + Integer.toString(Titulo.getSave()));
-                
-                if (save==1) {
-                  continuarButtom.setVisible(true);
-                  continuarLabel.setVisible(true);
-                }
+//                JOptionPane.showMessageDialog(null, "El valor de la variabl ees " + Integer.toString(Titulo.getSave()));
+//                
+//                if (save==1) {
+//                  continuarButtom.setVisible(true);
+//                  continuarLabel.setVisible(true);
+//                }
             }
         });
     }

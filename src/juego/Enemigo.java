@@ -15,9 +15,10 @@ import javax.swing.JOptionPane;
 public class Enemigo extends Personaje {
 
     private int debilidad;
+    /*Srive para controlar que el mensaje de destrucción de escudo no salga dos veces*/
+    private int contador;
 
     /*1) fuego, 2) rayo , 3)hielo, 4) tierra*/
-
     public Enemigo(String nombre, String clase, Arma arma, Double vida, Double mp, int debilidad, int defensa) {
         super(nombre, clase, arma, vida, mp, defensa);
         this.debilidad = debilidad;
@@ -33,12 +34,23 @@ public class Enemigo extends Personaje {
     }
 
     public void quitarVida(double vidaMinus, Enemigo ene) {
-
-        if (vidaMinus > ene.getDefensa()) {
+        
+        if (vidaMinus < ene.getDefensa()) {
+            /*quitamos escudo*/
+             JOptionPane.showMessageDialog(null, "Le has quitado" + vidaMinus + "puntos de escudo al enemigo!");
+            ene.setDefensa((int) (ene.getDefensa()-vidaMinus));
+        
+        } if(ene.getDefensa() <=0 ) {
             JOptionPane.showMessageDialog(null, "Le has quitado" + vidaMinus + "puntos de vida al enemigo!");
             ene.setVida(ene.getVida() - vidaMinus);
-        } else {
-            ene.setDefensa((int) (ene.getDefensa() - vidaMinus));
+        }
+        
+        
+        if (vidaMinus > ene.getDefensa() && contador==0) {
+           contador++;
+           ene.setDefensa(0);
+           JOptionPane.showMessageDialog(null, "HAS DESTRUIDO EL ESCUDO DEL ENEMIGO, A POR ÉL!!!!");
+
         }
 
     }

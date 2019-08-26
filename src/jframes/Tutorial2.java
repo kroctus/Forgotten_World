@@ -58,7 +58,6 @@ public class Tutorial2 extends javax.swing.JFrame {
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/tuto1.png"))); // NOI18N
         getContentPane().add(fondo);
         fondo.setBounds(0, 0, 1920, 1080);
-        fondo.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

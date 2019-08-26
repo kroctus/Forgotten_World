@@ -843,7 +843,7 @@ public class Fueguito extends javax.swing.JFrame {
                 contSiguiente2++;
                 break;
             case 3:
-                JOptionPane.showMessageDialog(null, "Empieza el tutorial");
+               
                 new Tutorial2().setVisible(true);
                 dispose();
                 contSiguiente2++;
